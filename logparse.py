@@ -67,5 +67,10 @@ def search(file, username=None):
         l = _parseline(line.strip(), username)
         if l != None:
             buf.append(l)
-            
-    return buf
+
+    t = []
+    for b in buf:
+        if not b in t:
+            t.append(b)
+
+    return t
