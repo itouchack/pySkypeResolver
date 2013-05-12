@@ -1,6 +1,7 @@
 import Skype4Py
 import sys
 import pyResolve
+import glob
 import socket
 from time import sleep
 def resolve(skypeName):
@@ -12,7 +13,7 @@ def resolve(skypeName):
 		skype.Client.Minimize()
 		skype.Client.Focus()
 		sleep(1)
-		resolving = pyResolve.search('debug-20130512-0558.log', skypeName)
+		resolving = pyResolve.search(glob.glob('*.log')[0], skypeName)
 		publicIp = resolving[0]['public']
 		localIp = resolving[0]['local']
 		return { 'success': True, 'publicIp': publicIp, 'localIp': localIp }

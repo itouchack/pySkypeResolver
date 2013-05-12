@@ -24,6 +24,7 @@ Usage:
 
 import re
 import codecs
+import glob
 
 
 def _parseline(line, username=None):
