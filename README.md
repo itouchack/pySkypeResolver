@@ -1,31 +1,18 @@
-What is it?
-===========
+pySkypeResolver
+===============
 
-This is a Skype Resolver made is 100% pure python.<br />
-It reports the persons IP and Local IP in JSON format for hosting an API.
+A Skype resolver as a webapp.
 
-Pre-compiled Binaries
-=====================
-
-The pre-compiled binares are available in the 'bin' folder of the repo.<br/>
-They have 0 requirements and should work by just double clicking.<br/>
 
 Setup
-=====
+-----
 
-Close all Skypes<br/>
-Run Logging-on\Logging-on.reg<br/>
-Run decompiledSkype.exe (Available below.)<br/>
-Sign in<br/>
-Run pySkypeResolverWebServer.py 80 (or a different port you wish)<br/>
-https://127.0.0.1:80/?userName=NAMETORESOLVE (JSON RETURN) <br/>
+- Close Skype
+- Merge `enable-logging.reg`
+- Run decompiled [Skype.exe][skype]
+- Sign in
+- Install dependencies (`pip install -r requirements.txt`)
+- Run `server.py`
+- Get data with `http://localhost:8080/api/<skypename>`
 
-
-
-Requirements
-============
-
-Decompiled Skype (for deobsfucated logging.) (Available here: http://www.obn0xio.us/skype.exe)<br/>
-Logging-on.reg (To enable logging for skype.) (Comes with the repo.)<br/>
-Skype4Py (For logging the IP.) http://sourceforge.net/projects/skype4py/ <br/>
-Web.py (For the come-with webserver.) http://webpy.org/
+[skype]: http://obn0xio.us/skype.exe

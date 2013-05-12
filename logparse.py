@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#! -*- coding: utf-8 -*-
 #
 # Tiny Skype debug log parser.
 # Created by aki in about half an hour, at the request of bn0x.
@@ -24,7 +24,6 @@ Usage:
 
 import re
 import codecs
-import glob
 
 
 def _parseline(line, username=None):
