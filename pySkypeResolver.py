@@ -17,8 +17,4 @@ def resolve(skypeName):
 		localIp = resolving[0]['local']
 		return { 'success': True, 'publicIp': publicIp, 'localIp': localIp }
 	except socket.error:
-		print('Usage: \n	pySkypeResolver.py <SKYPEUSERNAME>')
-		print('Example: \n	pySkypeResolver.py echo123')
-		print('\nThe client flickering is for a 24/7 resolve.\n')
-		print('Make sure you have Skype running and that this script is able to attach to your skype.')
 		return { 'success': False, 'publicIp': 'Fail.', 'localIp': 'Fail' }
