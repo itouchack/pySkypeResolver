@@ -4,5 +4,6 @@
 *.swp
 *.pyd
 *.dll
+*.trace.txt
 
 
