@@ -14,7 +14,7 @@ skype = ""
 
 def init():
     global skype
-    if skype != "":
+    if skype == "":
         skype = Skype4Py.Skype()
         skype.Attach()
          
