@@ -4,4 +4,7 @@
 *.txt
 *.zip
 *.swp
+*.pyd
+*.dll
+
 
