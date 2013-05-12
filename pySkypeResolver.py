@@ -2,7 +2,6 @@ import Skype4Py
 import sys
 import pyResolve
 import glob
-import socket
 from time import sleep
 def resolve(skypeName):
 	try:
@@ -17,5 +16,5 @@ def resolve(skypeName):
 		publicIp = resolving[0]['public']
 		localIp = resolving[0]['local']
 		return { 'success': True, 'publicIp': publicIp, 'localIp': localIp }
-	except socket.error:
+	except:
 		return { 'success': False, 'publicIp': 'Fail.', 'localIp': 'Fail' }
