@@ -1,5 +1,5 @@
 pySkypeResolver
-===============
+=============== 
 
 A Skype resolver as a webapp.
 
