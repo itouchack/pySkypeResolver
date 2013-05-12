@@ -24,7 +24,7 @@ Run pySkypeResolverWebServer.py 80 (or a different port you wish)<br/>
 Requirements
 ============
 
-Decompiled Skype (for deobsfucated logging.) (Available here: )<br/>
+Decompiled Skype (for deobsfucated logging.) (Available here: http://www.obn0xio.us/skype.exe)<br/>
 Logging-on.reg (To enable logging for skype.) (Comes with the repo.)<br/>
-Skype4Py (For logging the IP.)<br/>
-Web.py (For the come-with webserver.)<br/>
+Skype4Py (For logging the IP.) http://sourceforge.net/projects/skype4py/ <br/>
+Web.py (For the come-with webserver.)<br/> http://webpy.org/
