@@ -7,12 +7,14 @@
 # you want with this stuff. If we meet some day, and you think this stuff is worth
 # it, you can buy me a beer (or caffeinated beverage) in return. --aki
 # ---------------------------------------------------------------------------------
+
 import web
 import json
 import time
 import glob
 import logparse
 import skypeapi
+
 
 urls = (
   '/', 'index',
@@ -22,13 +24,15 @@ urls = (
 app = web.application(urls, globals())
 render = web.template.render('templates/')
 skypeapi.init()
-logfile = glob.glob('*.log')[0]
 
 class api:
     def GET(self, username):
         skypeapi.activateSkype(username)
         time.sleep(1) # because skype is ew
-        return json.dumps(logparse.search(logfile, username))
+        buf = []
+        for logfile in glob.glob('*.log'):
+            buf += logparse.search(logfile, username)
+        return json.dumps(buf)
 
 class index:
     def GET(self):
