@@ -28,7 +28,7 @@ skypeapi.init()
 class api:
     def GET(self, username):
         skypeapi.activateSkype(username)
-        time.sleep(1) # because skype is ew
+        time.sleep(3) # because skype is ew
         buf = []
         for logfile in glob.glob('*.log'):
             buf += logparse.search(logfile, username)
