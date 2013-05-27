@@ -45,11 +45,8 @@ def _parseline(line, username=None):
         
         return {'public': public.encode('utf-8'), 'local': local.encode('utf-8')}
 
-    except UnicodeDecodeError:
-        return None
-
     except:
-        raise
+        return None
 
 def search(file, username=None):
     """
